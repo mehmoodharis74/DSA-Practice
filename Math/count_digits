@@ -1,0 +1,15 @@
+def count_digits(num):
+    print( len(str(num)) )
+
+count_digits(4567)
+
+
+
+def count_digits1(num):
+    count = 0
+    while num > 0:
+        num = num // 10
+        count = count + 1
+    print(count)
+
+count_digits1(4567)

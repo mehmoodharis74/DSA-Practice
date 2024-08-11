@@ -1,0 +1,11 @@
+def pattern(n):
+    ascii = 65
+    
+    for i in range(n, 0, -1 ):
+        temp = ascii
+        for j in range(i):
+            print (str(chr(temp)), end=" ")
+            temp = temp + 1
+        print()
+            
+pattern(10)
