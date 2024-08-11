@@ -1,0 +1,8 @@
+def sum(i):
+    if i < 1 : return 0
+    return i + sum(i-1)
+
+
+
+N = 5
+print(sum(N))
