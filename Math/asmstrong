@@ -1,0 +1,17 @@
+def armstrong(num):
+    digits = [int(digit) for digit in str(num)]
+    count = len(digits)
+    sum = 0
+    for x in digits :
+        sum += pow(x,count)
+    if sum == num:
+        return True
+    else:
+        return False
+
+            
+
+
+
+
+print(armstrong(139))
