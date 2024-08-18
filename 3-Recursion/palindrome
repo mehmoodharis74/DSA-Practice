@@ -1,0 +1,13 @@
+def palindrome(i,n,arr):  
+    if arr[i] != arr[n]:
+        return False
+    if i>=n:
+        return True
+    return palindrome(i+1,n-1, arr)
+    
+
+
+str = "A man, a plan, a canal: Panama"
+str = "".join(char.upper() for char in str if char.isalnum())
+print(str)
+print(palindrome(0,len(str)-1, str))
