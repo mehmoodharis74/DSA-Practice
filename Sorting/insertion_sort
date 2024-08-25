@@ -1,0 +1,11 @@
+def insertionSort(arr):
+    for i in range(len(arr)):
+        temp = i
+        while(temp>0 and arr[temp] < arr[temp-1]):
+            var = arr[temp]
+            arr[temp] =arr[temp-1]
+            arr[temp-1]=var
+            temp -=1
+    return arr
+arr = [13,46,24,52,20,9]
+print("The sorted array using insertionSort is :" ,insertionSort(arr))
