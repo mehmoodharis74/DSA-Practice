@@ -1,0 +1,16 @@
+def insertionSort_recursive(arr,key, n):
+    if key == n:
+        return
+    i = key
+    k = i - 1
+    while k>=0:
+        if arr[i] < arr [k]:
+            arr[i], arr[k] = arr[k], arr[i]
+            i = k
+        k -=1
+    insertionSort_recursive(arr, key + 1, n)
+    
+arr = [12,14,11,5,6,7,4,3]
+insertionSort_recursive(arr,1, len(arr))
+print(arr)
+
