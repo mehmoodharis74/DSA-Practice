@@ -1,0 +1,23 @@
+#Loop the array and find the max from the array and return it
+#Time Complexity: O(n)
+def largestElement(arr, n):
+    max = arr[n-1]
+    for x in arr:
+        if x > max:
+            max = x
+    return max
+
+def largestElementRecursion(arr,i,max, n):
+    if i == n:
+        return max
+    if arr[i] > max:
+        max = arr[i]
+    return largestElementRecursion(arr, i+1, max, n)
+
+
+
+arr = [12,14,11,5,6,7,4,23]
+
+print("The element from the array is: ", largestElement(arr, len(arr)))
+print("The element from the array using recursion is: ", largestElementRecursion(arr,0, arr[len(arr)-1], len(arr)))
+print("The element from the array using method is: ", max(arr))
