@@ -1,0 +1,25 @@
+def SecondLargestElement(arr):
+    if len(arr) ==1:
+        return arr[0]
+    firstLargest = secondLargest = -21232342
+    firstSmallest = secondSmallest = 2123487
+
+    for x in range(len(arr)):
+        if arr[x] > firstLargest:
+           secondLargest = firstLargest
+           firstLargest = arr[x]
+        if arr[x] > secondLargest and arr[x] < firstLargest:
+            secondLargest = arr[x]
+        if arr[x] < firstSmallest:
+            secondSmallest = firstSmallest
+            firstSmallest = arr[x]
+        if arr[x] < secondSmallest and arr[x] > firstSmallest:
+            secondSmallest = arr[x]
+           
+            first = arr[x]
+    return secondLargest, secondSmallest
+
+
+
+arr = [1,2,3,4,5,6]
+print("The Second lagsest element in the array without sorting is :" , SecondLargestElement(arr=arr))
