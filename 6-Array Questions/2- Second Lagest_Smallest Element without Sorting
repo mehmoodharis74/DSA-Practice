@@ -1,3 +1,10 @@
+# Solution:
+# So created the variables for the first second largest and smallest to contain
+# their values and update accordignly in this way in a single iteration
+# we can find the desired values
+# Time Complexity: O(n)
+
+
 def SecondLargestElement(arr):
     if len(arr) ==1:
         return arr[0]
