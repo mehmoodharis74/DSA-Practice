@@ -1,0 +1,35 @@
+#Time Complexity : O(n^2)
+def removeDuplicates(nums):
+        count = 0
+        while count < len(nums):
+            value = nums[count]
+            nums.pop(count)
+            if value not in nums:
+                nums.insert(count,value)
+                count += 1
+        return count
+
+
+
+#Time Complexity: O(n)
+def removeDuplicatess(nums):
+        previous = -1000
+        count = 0
+        for x in nums:
+            if x != previous:
+                nums[count] = x
+                previous = x 
+                count += 1
+        return count
+
+
+print(removeDuplicates([1,1,2,2,3,3,3,4]))
+print(removeDuplicatess([1,1,2,2,3,3,3,4]))
+
+
+            
+
+
+        
+
+        
