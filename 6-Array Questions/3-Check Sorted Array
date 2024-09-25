@@ -11,14 +11,6 @@ def isArraySorted(arr):
     
    
 
-    # j = i+1
-    # count = 0
-    # while (arr[0] != minValue):
-    #     arr[i], arr[j] = arr[j] , arr[i]
-    #     i+=1
-    #     j+=1
-    #     count += 1
-
     for x in range(len(arr)-1):
         if arr[x] <= arr[x+1]:
             continue

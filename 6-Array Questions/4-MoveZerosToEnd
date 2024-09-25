@@ -1,0 +1,18 @@
+#Create Separate Variable for arr indexing where the values are not zero just save them to the arraay
+# and inc the count after that till end of the array added zero
+# Time Complexity: O(n), SpaceComplexity: O(n)
+def moveZeros(arr):
+    count = 0
+    for i in range(len(arr)):
+        if arr[i] != 0:
+            arr[count] = arr[i]
+            count += 1
+    for i in range(count, len(arr)):
+        arr[i] = 0
+    return arr
+
+
+
+
+arr = [1,0,3,0,5]
+print(moveZeros(arr))
