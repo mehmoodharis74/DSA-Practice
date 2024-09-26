@@ -1,0 +1,9 @@
+def singleNumber(nums):
+        my_dic = {}
+        for x in nums:
+            my_dic[x] = my_dic.get(x,0) + 1
+        value = next((x for x, y in my_dic.items() if y == 1), None)
+        return value
+
+arr = [1,2,2,3,3,4,4]
+print(singleNumber(arr))
