@@ -1,0 +1,10 @@
+def rotateArray(arr, num):
+    num = num % len(arr)
+    arr[:] = arr[-num:] + arr[:-num]
+    return arr
+
+
+
+arr = [1,2,3,4,5]
+print("Array Without Rotation: ", arr)
+print("Rotated array is :", rotateArray(arr,2))

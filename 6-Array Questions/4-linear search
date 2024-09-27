@@ -1,0 +1,10 @@
+def linearSearch(arr,k):
+    if k in arr:
+        return True
+    else:
+        return False
+
+
+
+arr = [1,2,3,4,5,6,7]
+print ("The items exists: ", linearSearch(arr,11))

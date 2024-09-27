@@ -1,0 +1,19 @@
+#so iterate in a list to check how total consective ones come check
+# if they are the greater than pervious max consectives , replace if yes
+# TimeComplixity: O(n), Space Complexity = O(1)
+def consectiveOnes(arr):
+    maxCons = count = 0
+    for x in arr:
+        if x == 1:
+            count += 1
+        else:
+            if count> maxCons:
+                maxCons = count
+            count = 0
+    if count > maxCons:
+        maxCons = count
+    return maxCons
+
+
+arr = [1,1,0,1,1,1]
+print("The maximum consective 1's an array contains: ", consectiveOnes(arr))
