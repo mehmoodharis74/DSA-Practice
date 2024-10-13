@@ -1,0 +1,11 @@
+#using dic so we got the time complexity of O(n) an space Complexity
+# of O(n)
+def twoSum(self, nums, target):
+        dic = {} 
+        for i, num in enumerate(nums):
+            complement = target - num
+            if complement in dic:
+                return [dic[complement],i]
+            dic[num] = i
+            
+        
